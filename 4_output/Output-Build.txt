@@ -1,0 +1,52 @@
+﻿------ Rebuild All started: Project: 1st project, Configuration: Debug AVR ------
+Build started.
+Project "1st project.cproj" (Clean target(s)):
+Target "Clean" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "c:\users\user\Documents\Atmel Studio\7.0\1st project\1st project\1st project.cproj" (entry point):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe clean 
+		rm -rf  main.o   
+		rm -rf  main.d   
+		rm -rf "1st project.elf" "1st project.a" "1st project.hex" "1st project.lss" "1st project.eep" "1st project.map" "1st project.srec" "1st project.usersignatures"
+	Done executing task "RunCompilerTask".
+Done building target "Clean" in project "1st project.cproj".
+Done building project "1st project.cproj".
+
+Build succeeded.
+------ Rebuild All started: Project: 1st project, Configuration: Debug AVR ------
+Build started.
+Project "1st project.cproj" (default targets):
+Target "PreBuildEvent" skipped, due to false condition; ('$(PreBuildEvent)'!='') was evaluated as (''!='').
+Target "CoreBuild" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Compiler.targets" from project "c:\users\user\Documents\Atmel Studio\7.0\1st project\1st project\1st project.cproj" (target "Build" depends on it):
+	Task "RunCompilerTask"
+		Shell Utils Path C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils
+		C:\Program Files (x86)\Atmel\Studio\7.0\shellUtils\make.exe all --jobs 4 --output-sync 
+		Building file: .././main.c
+		Invoking: AVR/GNU C Compiler : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe"  -x c -funsigned-char -funsigned-bitfields -DDEBUG  -I"C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\include"  -Og -ffunction-sections -fdata-sections -fpack-struct -fshort-enums -g2 -Wall -mmcu=atmega328 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328" -c -std=gnu99 -MD -MP -MF "main.d" -MT"main.d" -MT"main.o"   -o "main.o" ".././main.c" 
+		Finished building: .././main.c
+		Building target: 1st project.elf
+		Invoking: AVR/GNU Linker : 5.4.0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-gcc.exe" -o "1st project.elf"  main.o   -Wl,-Map="1st project.map" -Wl,--start-group -Wl,-lm  -Wl,--end-group -Wl,--gc-sections -mmcu=atmega328 -B "C:\Program Files (x86)\Atmel\Studio\7.0\Packs\atmel\ATmega_DFP\1.6.364\gcc\dev\atmega328"  
+		Finished building target: 1st project.elf
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O ihex -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures  "1st project.elf" "1st project.hex"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -j .eeprom  --set-section-flags=.eeprom=alloc,load --change-section-lma .eeprom=0  --no-change-warnings -O ihex "1st project.elf" "1st project.eep" || exit 0
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objdump.exe" -h -S "1st project.elf" > "1st project.lss"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-objcopy.exe" -O srec -R .eeprom -R .fuse -R .lock -R .signature -R .user_signatures "1st project.elf" "1st project.srec"
+		"C:\Program Files (x86)\Atmel\Studio\7.0\toolchain\avr8\avr8-gnu-toolchain\bin\avr-size.exe" "1st project.elf"
+		   text	   data	    bss	    dec	    hex	filename
+		    164	      0	      0	    164	     a4	1st project.elf
+	Done executing task "RunCompilerTask".
+	Task "RunOutputFileVerifyTask"
+				Program Memory Usage 	:	164 bytes   0.5 % Full
+				Data Memory Usage 		:	0 bytes   0.0 % Full
+				Warning: Memory Usage estimation may not be accurate if there are sections other than .text sections in ELF file
+	Done executing task "RunOutputFileVerifyTask".
+Done building target "CoreBuild" in project "1st project.cproj".
+Target "PostBuildEvent" skipped, due to false condition; ('$(PostBuildEvent)' != '') was evaluated as ('' != '').
+Target "Build" in file "C:\Program Files (x86)\Atmel\Studio\7.0\Vs\Avr.common.targets" from project "c:\users\user\Documents\Atmel Studio\7.0\1st project\1st project\1st project.cproj" (entry point):
+Done building target "Build" in project "1st project.cproj".
+Done building project "1st project.cproj".
+
+Build succeeded.
+========== Rebuild All: 1 succeeded, 0 failed, 0 skipped ==========
